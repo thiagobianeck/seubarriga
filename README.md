@@ -25,3 +25,18 @@ npm i -S -E body-parser@1.18.3
 
 -- instalar o consign
 npm i -S -E consign@0.1.6
+
+-- instalar o knex
+npm i -S -E knex@0.15.2
+
+-- instalar o postgres
+npm i -S -E pg@7.7.1
+
+-- criar migrations com o knexJs
+node_modules/.bin/knex migrate:make create_users --env test
+
+-- efetuar a migração
+node_modules/.bin/knex migrate:latest --env test
+
+-- voltar a migração
+node_modules/.bin/knex migrate:rollback --env test
