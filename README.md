@@ -1,10 +1,14 @@
-*Comandos Utilizados*
+**Comandos Utilizados**
 
-mkdir nomeDoDiretorio
-npm init -y
+```mkdir nomeDoDiretorio```
+
+```npm init -y```
+
 npm i -D eslint
+
 ./node_modules/.bin/eslint --init
 ./node_modules/.bin/eslint src/** test/** --fix
+
 -- colocar no package.json
 "lint": "eslint src/** test/** --fix"
 --
@@ -40,3 +44,6 @@ node_modules/.bin/knex migrate:latest --env test
 
 -- voltar a migração
 node_modules/.bin/knex migrate:rollback --env test
+
+-- instalar o knex-logger
+npm i -S knex-logger
