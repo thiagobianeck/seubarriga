@@ -1,0 +1,17 @@
+b4a4f277578cebf23bae0c3a6f3f463a
+module.exports = {
+  test: {
+    client: 'pg',
+    version: '9.6',
+    connection: {
+      host: 'localhost',
+      user: 'postgres',
+      password: 'postgres',
+      database: 'barriga'
+    },
+    migrations: {
+      directory: 'src/migrations'
+    }
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImtuZXhmaWxlLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJ0ZXN0IiwiY2xpZW50IiwidmVyc2lvbiIsImNvbm5lY3Rpb24iLCJob3N0IiwidXNlciIsInBhc3N3b3JkIiwiZGF0YWJhc2UiLCJtaWdyYXRpb25zIiwiZGlyZWN0b3J5Il0sIm1hcHBpbmdzIjoiQUFBQUEsT0FBT0MsT0FBUCxHQUFpQjtBQUNmQyxRQUFNO0FBQ0pDLFlBQVEsSUFESjtBQUVKQyxhQUFTLEtBRkw7QUFHSkMsZ0JBQVk7QUFDVkMsWUFBTSxXQURJO0FBRVZDLFlBQU0sVUFGSTtBQUdWQyxnQkFBVSxVQUhBO0FBSVZDLGdCQUFVO0FBSkEsS0FIUjtBQVNKQyxnQkFBWTtBQUNWQyxpQkFBVztBQUREO0FBVFI7QUFEUyxDQUFqQiIsImZpbGUiOiJrbmV4ZmlsZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xuICB0ZXN0OiB7XG4gICAgY2xpZW50OiAncGcnLFxuICAgIHZlcnNpb246ICc5LjYnLFxuICAgIGNvbm5lY3Rpb246IHtcbiAgICAgIGhvc3Q6ICdsb2NhbGhvc3QnLFxuICAgICAgdXNlcjogJ3Bvc3RncmVzJyxcbiAgICAgIHBhc3N3b3JkOiAncG9zdGdyZXMnLFxuICAgICAgZGF0YWJhc2U6ICdiYXJyaWdhJ1xuICAgIH0sXG4gICAgbWlncmF0aW9uczoge1xuICAgICAgZGlyZWN0b3J5OiAnc3JjL21pZ3JhdGlvbnMnLFxuICAgIH0sXG4gIH0sXG59OyJdfQ==
