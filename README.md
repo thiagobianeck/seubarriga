@@ -1,5 +1,7 @@
 **Comandos Utilizados**
 
+para limpar o banco para novos testes usar o rollback do knex para recriar as bases
+
 ```mkdir nomeDoDiretorio```
 
 ```npm init -y```
