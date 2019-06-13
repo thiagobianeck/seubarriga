@@ -5,10 +5,10 @@ const MAIN_ROUTE = '/accounts';
 let user;
 
 beforeAll(async () => {
-  const res = await app.services.user.save({ 
-    name: 'User Account', 
-    mail: `${Date.now()}@mail.com`, 
-    passwd: '123456'
+  const res = await app.services.user.save({
+    name: 'User Account',
+    mail: `${Date.now()}@mail.com`,
+    passwd: '123456',
   });
   user = { ...res[0] };
 });
@@ -16,11 +16,22 @@ beforeAll(async () => {
 test('Deve inserir uma conta com sucesso', () => {
   return request(app).post(MAIN_ROUTE)
     .send({ name: 'Acc #1', user_id: user.id })
-    .then(result => {
+    .then((result) => {
       expect(result.status).toBe(201);
       expect(result.body.name).toBe('Acc #1');
     });
 });
+
+test('Não deve inserir uma conta sem nome', () => {
+  return request(app).post(MAIN_ROUTE)
+    .send({ user_id: user.id })
+    .then((result) => {
+      expect(result.status).toBe(400);
+      expect(result.body.error).toBe('Nome é um atributo obrigatório');
+    });
+});
+
+test.skip('Não deve inserir uma conta de nome duplicado, para o mesmo usuário', () => {});
 
 test('Deve listar todas as contas', () => {
   return app.db('accounts')
@@ -31,6 +42,8 @@ test('Deve listar todas as contas', () => {
       expect(res.body.length).toBeGreaterThan(0);
     });
 });
+
+test.skip('Deve listar apenas as contas do usuário', () => {});
 
 test('Deve retornar uma conta por Id ', () => {
   return app.db('accounts')
@@ -43,6 +56,8 @@ test('Deve retornar uma conta por Id ', () => {
     });
 });
 
+test.skip('Não deve retornar uma conta de outro usuário', () => {});
+
 test('Deve alterar uma conta', () => {
   return app.db('accounts')
     .insert({ name: 'Acc To Update', user_id: user.id }, ['id'])
@@ -54,6 +69,8 @@ test('Deve alterar uma conta', () => {
     });
 });
 
+test.skip('Não deve alterar uma conta de outro usuário', () => {});
+
 test('Deve remover uma conta', () => {
   return app.db('accounts')
     .insert({ name: 'Acc to remove', user_id: user.id }, ['id'])
@@ -62,3 +79,8 @@ test('Deve remover uma conta', () => {
       expect(res.status).toBe(204);
     });
 });
+
+test.skip('Não deve remover uma conta de outro usuário', () => {});
+
+test.skip('Não deve inserir uma conta de nome duplicado, para o mesmo usuário', () => {});
+
