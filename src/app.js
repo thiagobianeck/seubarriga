@@ -7,10 +7,10 @@ const knexfile = require('../knexfile');
 // TODO criar chaveamento dinâmico
 app.db = knex(knexfile.test);
 
-app.get('/users', (req, res, next) => {
-  console.log('Passei aqui!');
-  next();
-});
+// app.get('/users', (req, res, next) => {
+//   console.log('Passei aqui!');
+//   next();
+// });
 
 consign({ cwd: 'src', verbose: false })
   .include('./config/middlewares.js')
@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
   res.status(200).send();
 });
 
-app.use((req, res) => {
-  console.log('e aqui também!');
-});
+// app.use((req, res) => {
+//   console.log('e aqui também!');
+// });
 
 // app.db.on('query', (query) => {
 //     console.log({
