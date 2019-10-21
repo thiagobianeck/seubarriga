@@ -36,7 +36,7 @@
     "consign": "0.1.6",
     "eslint-plugin-jest": "^22.6.4",
     "express": "4.16.4",
-    "knex": "0.15.2",
+    "knex": "0.19.5",
     "knex-logger": "^0.1.0",
     "pg": "7.7.1"
   }
